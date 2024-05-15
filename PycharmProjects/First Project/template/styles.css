@@ -1,0 +1,52 @@
+body {
+  font-family: Tahoma, fantasy;
+  margin: 5px;
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#taskInput {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: upper-roman;
+  padding: 20px;
+}
+
+li {
+  margin-bottom: 30px;
+  background-color: brown;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+li span {
+  display: inline-block;
+  width: 70%;
+}
+
+li input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  display: none;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+li button:nth-child(3) {
+  display: none;
+}
