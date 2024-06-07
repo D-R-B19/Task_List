@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
+from logger import setup_logger
 
 app = Flask(__name__)
+log = setup_logger("app")
 
 # Initial list of tasks
 tasks = []
@@ -8,6 +10,7 @@ tasks = []
 
 @app.route('/')
 def tasks():
+    log.info('function tasks called')
     return render_template('index.html', tasks=tasks)
 
 
@@ -29,9 +32,10 @@ def edit_task(index):
 
 @app.route('/delete_task/<int:index>')
 def delete_task(index):
+    log.info('function tasks called')
     del tasks[index]
     return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)

@@ -12,3 +12,16 @@ pip install -r requirements.txt
 ### App Running
 python app.py
 ```
+
+### Docker installation
+### Dockerfile creation 
+### .dockerignore creation 
+docker build -t firstimage .
+docker run -it -p5000:5000 firstimage   
+### Docker hub push
+docker login
+
+docker tag loca_repo_name username/dockerhub_reponame:tag
+
+docker push username/dockerhub_reponame:tag
+
