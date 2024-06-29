@@ -1,24 +1,22 @@
 services:
-  db:
-    image: postgres:latest
+  web1:
+    build: .
+    volumes:
+      - ./visits.json:/app/visits.json
+    ports:
+      - "5002:5000"
 
-    restart: always
-    environment:
-      POSTGRES_USER: doaa
-      POSTGRES_PASSWORD: doaa
-      POSTGRES_DB: task_list
+  web2:
+    build: .
+    volumes:
+      - ./visits.json:/app/visits.json
+    ports:
+      - "5001:5000"
 
-
-  web:
-    image: firstimage
-    depends_on:
-      - db
+  nginx:
+    build:
+      context: ./nginx
     ports:
       - "5000:5000"
-    environment:
-      DB_HOST: task_list
-      DB_NAME: doaa
-      DB_USER: doaa
-      DB_PASS: doaa
 
 

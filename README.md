@@ -10,7 +10,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ### App Running
-python app.py
+python main.py
 ```
 
 ### Docker installation
