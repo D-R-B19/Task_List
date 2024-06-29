@@ -15,7 +15,7 @@ tasks = []
 def tasks():
     log.info('function tasks called')
     return render_template('index.html', tasks=tasks)
-
+# test add task
 
 @app.route('/add_task', methods=['POST'])
 def add_task():
