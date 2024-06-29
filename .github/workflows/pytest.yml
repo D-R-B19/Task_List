@@ -1,7 +1,8 @@
 name: PyTest
 
 on: [ push ]
-
+  paths:
+    - 'main.py'
 jobs:
   test:
     runs-on: ubuntu-latest
