@@ -2,10 +2,11 @@ name: PyTest
 
 on: 
   push:
-   paths: 
-    - 'main.py'
-    - '* /first_project'
-  
+    paths: 
+      - '*.py'
+      - '.github/workflows/pytest.yml'
+      - 'tests/test_index.py'
+      
 jobs:
   test:
     runs-on: ubuntu-latest
