@@ -2,21 +2,17 @@ import os
 
 from flask import Flask, render_template, request, redirect, url_for, jsonify, json
 from logger import setup_logger
-
 VISITS_FILE = 'visits.json'
 app = Flask(__name__)
 log = setup_logger("app")
 
 # Initial list of tasks
 tasks = []
-
-
 @app.route('/')
 def tasks():
     log.info('function tasks called')
     return render_template('index.html', tasks=tasks)
 # test add task
-
 @app.route('/add_task', methods=['POST'])
 def add_task():
     task = request.form['task']
