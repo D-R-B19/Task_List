@@ -35,7 +35,7 @@ def delete_task(index):
     del tasks[index]
     return redirect(url_for('index'))
 
-
+#visit count
 def get_visit_count():
     if not os.path.exists(VISITS_FILE):
         return 0
