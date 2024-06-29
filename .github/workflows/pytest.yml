@@ -4,8 +4,8 @@ on:
   push:
    paths: 
     - 'main.py'
-    - '.github\workflows\pytest.yml'
-    - 'templates\index.html'
+    - '.github/workflows/pytest.yml'
+    - 'templates/index.html'
 
 jobs:
   test:
