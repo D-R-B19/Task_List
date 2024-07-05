@@ -14,6 +14,7 @@ pip install -r requirements.txt
 python main.py
 ```
 ##Dockeraization
+```bash
 ### Docker installation
 ### Dockerfile creation 
 ### .dockerignore creation 
@@ -27,4 +28,4 @@ docker push username/dockerhub_reponame:tag
 ### Docker hub || pull from docker hub registery to docker client(local)
 docker pull (containeror image name)
 docker run (containeror image name)
-
+```
