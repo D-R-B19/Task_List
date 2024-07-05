@@ -1,52 +1,100 @@
 body {
-  font-family: Tahoma, fantasy;
-  margin: 10px;
-  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #35d2c5;
+  margin: 30;
+  padding: 10;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(98, 23, 138);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 h1 {
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-#taskInput {
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
   width: 70%;
-  padding: 8px;
-  margin-bottom: 10px;
-}
-
-button {
-  margin-right: 20px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-ul {
-  list-style-type: upper-roman;
   padding: 10px;
-}
-
-li {
-  margin-bottom: 10px;
-  background-color: blueviolet;
-  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
-li span {
-  display: inline-block;
-  width: 70%;
+form button {
+  padding: 10px 20px;
+  border: none;
+  background: #5cb85c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
 }
 
-li input[type="text"] {
-  width: 70%;
-  padding: 8px;
-  display: none;
+form button:hover {
+  background: #4cae4c;
 }
 
-li button {
-  margin-left: 20px;
+.task_list {
+  list-style-type: none;
+  padding: 0;
 }
 
-li button:nth-child(50) {
-  display: none;
+.task_list li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9ecef;
+}
+
+.task_list li button {
+  border: none;
+  background: #d9534f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.task_list li button:hover {
+  background: #c9302c;
+}
+
+.edit_task {
+  margin-right: 10px;
+  border: none;
+  background: #f0ad4e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.edit_task:hover {
+  background: #ec971f;
+}
+
+.visit_count {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
 }
