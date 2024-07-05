@@ -2,26 +2,29 @@
 
 ## Development
 ```bash
-### creat Virtual environment
+### Step 1:creat Virtual environment
 
 python -m venv venv
 source venv/bin/activate
-### Requirements
+
+###Step 2: Requirements installation 
 
 pip install -r requirements.txt
-### App Running
+### Step 3: App Running
 python main.py
 ```
-
+##Dockeraization
 ### Docker installation
 ### Dockerfile creation 
 ### .dockerignore creation 
 docker build -t firstimage .
-docker run -it -p5000:5000 firstimage   
-### Docker hub push
+docker run -it -p5000:5000 firstimage  
+
+### Docker hub || push from local to hub registery
 docker login
-
 docker tag loca_repo_name username/dockerhub_reponame:tag
-
 docker push username/dockerhub_reponame:tag
+### Docker hub || pull from docker hub registery to docker client(local)
+docker pull (containeror image name)
+docker run (containeror image name)
 
