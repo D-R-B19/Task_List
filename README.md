@@ -13,15 +13,15 @@ pip install -r requirements.txt
 ### Step 3: App Running
 python main.py
 ```
-##Dockeraization
+## Dockeraization
 ```bash
-### Docker installation
-### Dockerfile creation 
-### .dockerignore creation 
+Docker installation
+Dockerfile creation 
+.dockerignore creation 
 docker build -t firstimage .
 docker run -it -p5000:5000 firstimage  
-
-### Docker hub || push from local to hub registery
+----------------
+Docker hub || push from local to hub registery
 docker login
 docker tag loca_repo_name username/dockerhub_reponame:tag
 docker push username/dockerhub_reponame:tag
